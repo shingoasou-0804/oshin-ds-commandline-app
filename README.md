@@ -23,6 +23,9 @@ $ docker compose exec command-app python recommend_books.py susumuis 5000 -i dat
 
 # DNAヌクレオチドカウント実行
 $ docker compose exec command-app python dna/dna.py dna/tests/inputs/input_dna_2.txt
+
+# DNAヌクレオチドカウント テスト実行
+$ docker compose exec command-app pytest dna/tests/dna_test.py
 ```
 
 - `data` フォルダに `result-susumuis-5000.csv` などの結果が出力される
