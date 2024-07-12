@@ -9,7 +9,7 @@ def test_get_balance_in_currency():
     with patch("requests.get") as mock_get:
         mock_get.return_value.status_code = 200
         mock_get.return_value.json.return_value = {
-            'rate': 145
+            'rate': 150
         }
 
         balance_JPY = amount.get_balance_in_currency("JPY")
