@@ -14,3 +14,9 @@ def test_deposit_positive_amount():
     amount = BankAccount(0)
     amount.deposit(500)
     assert amount.get_balance() == 500, "預金残高が間違っています。"
+
+
+@pytest.mark.skip(reason="作り途中です")
+def test_features_xx():
+    # 未実装のテスト
+    pass
