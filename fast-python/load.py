@@ -1,6 +1,7 @@
 import collections
 import csv
 import datetime
+import os
 import requests
 import sys
 
@@ -27,7 +28,8 @@ def download_data(station, year):
 def download_all_data(stations, start_year, end_year):
     for station in stations:
         for year in range(start_year, end_year + 1):
-            download_data(station, year)
+            if not os.path.exists(TEMPLATE_FILE.format(station=station, year=year)):
+                download_data(station, year)
 
 
 def get_file_temperatures(file_name):
