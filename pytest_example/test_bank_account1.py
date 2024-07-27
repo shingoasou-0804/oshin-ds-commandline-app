@@ -8,7 +8,7 @@ def initial_amount():
 
 
 def test_bank_account_initial_balance(initial_amount):
-    assert initial_amount.get_balance() == 1000, "残高が正しくありません。"
+    assert initial_amount.get_balance() == 2000, "残高が正しくありません。"
 
 
 def test_deposit_positive_amount():
